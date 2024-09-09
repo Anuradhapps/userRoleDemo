@@ -22,22 +22,25 @@
                                         <h5 class="card-title text-center pb-0 fs-4">Login to Your Account</h5>
                                         <p class="text-center small">Enter your email & password to login</p>
                                     </div>
-                                    @include('_message')
+                                    <x-_message />
                                     <form class="row g-3" action="" method="POST">
                                         @csrf
                                         <div class="col-12">
                                             <label for="yourEmail" class="form-label">Email</label>
-                                            <input type="email" name="email" class="form-control" id="yourEmail" required>
+                                            <input type="email" name="email" class="form-control" id="yourEmail"
+                                                required>
                                         </div>
 
                                         <div class="col-12">
                                             <label for="yourPassword" class="form-label">Password</label>
-                                            <input type="password" name="password" class="form-control" id="yourPassword" required>
+                                            <input type="password" name="password" class="form-control"
+                                                id="yourPassword" required>
                                         </div>
 
                                         <div class="col-12">
                                             <div class="form-check">
-                                                <input class="form-check-input" type="checkbox" name="remember" id="rememberMe">
+                                                <input class="form-check-input" type="checkbox" name="remember"
+                                                    id="rememberMe">
                                                 <label class="form-check-label" for="rememberMe">Remember me</label>
                                             </div>
                                         </div>

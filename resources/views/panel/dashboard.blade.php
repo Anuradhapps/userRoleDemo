@@ -6,7 +6,7 @@
 
     <main id="main" class="main">
 
-        <x-pagetitle></x-pagetitle>
+        <x-pagetitle title="Dashboard"></x-pagetitle>
 
         <section class="section dashboard">
             <div class="row">
