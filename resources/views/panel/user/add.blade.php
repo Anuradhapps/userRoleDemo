@@ -20,7 +20,16 @@
                                         <input type="text" name="name" class="form-control" required>
                                     </div>
                                 </div>
-
+                                <div class="row mb-3">
+                                    <label for="inputText" class="col-sm-12 col-form-label">Select Role</label>
+                                    <div class="col-sm-12">
+                                        <select class="form-select" name="role" id="">
+                                            @foreach ($roles as $role)
+                                                <option class="form-select" value="{{ $role->id }}">{{ $role->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
 
                                 <div class=" mb-3 d-flex justify-content-end">
                                     <button type="submit" class="btn btn-primary">Add</button>

@@ -5,13 +5,10 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Role extends Model
+class permission extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'name',
-    ];
-
+    protected $guarded = [];
     public function permissionedRoles()
 {
     return $this->hasMany(PermissionedRole::class);

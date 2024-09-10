@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Role;
 use App\Models\User;
 use Exception;
 use Illuminate\Http\Request;
@@ -10,13 +11,16 @@ class UserController extends Controller
 {
     public function list()
     {
+
         return view('panel.user.list', [
             'users' => user::all()
         ]);
     }
     public function add()
     {
-        return view('panel.user.add');
+        return view('panel.user.add',[
+            'roles'=>Role::all()
+        ]);
     }
     public function insert(Request $request)
     {
