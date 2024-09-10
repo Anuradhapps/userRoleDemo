@@ -11,7 +11,6 @@ class UserController extends Controller
 {
     public function list()
     {
-
         return view('panel.user.list', [
             'users' => user::all()
         ]);
@@ -24,6 +23,7 @@ class UserController extends Controller
     }
     public function insert(Request $request)
     {
+        dd($request->all());
         User::create([
             'name' => $request->name
         ]);

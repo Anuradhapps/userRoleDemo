@@ -21,11 +21,23 @@
                                     </div>
                                 </div>
                                 <div class="row mb-3">
+                                    <label for="inputText" class="col-sm-12 col-form-label">email</label>
+                                    <div class="col-sm-12">
+                                        <input type="email" name="email" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="inputText" class="col-sm-12 col-form-label">Password</label>
+                                    <div class="col-sm-12">
+                                        <input type="password" name="password" class="form-control" required>
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
                                     <label for="inputText" class="col-sm-12 col-form-label">Select Role</label>
                                     <div class="col-sm-12">
-                                        <select class="form-select" name="role" id="">
+                                        <select class="form-select" name="role_id" id="">
                                             @foreach ($roles as $role)
-                                                <option class="form-select" value="{{ $role->id }}">{{ $role->name }}</option>
+                                                <option value="{{ $role->id }}">{{ $role->name }}</option>
                                             @endforeach
                                         </select>
                                     </div>
