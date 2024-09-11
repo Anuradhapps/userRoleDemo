@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\permission;
+use App\Models\PermissionedRole;
 use App\Models\Role;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -56,5 +57,12 @@ class DatabaseSeeder extends Seeder
             'slug' => 'settings',
             'group_by' => 6
         ]);
+        for($i = 1; $i < 23; $i++){
+            PermissionedRole::factory()->create([
+                'role_id' => 1,
+                'permission_id' => $i
+            ]);
+        }
+        
     }
 }
