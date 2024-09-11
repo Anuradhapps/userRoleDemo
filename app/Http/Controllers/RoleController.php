@@ -13,8 +13,12 @@ class RoleController extends Controller
 {
     public function list()
     {
+        if(!in_array('role', $this->getPermission())){
+          abort(404);
+        }
         return view('panel.role.list', [
-            'roles' => Role::all()
+            'roles' => Role::all(),
+            'permissionNames'=>$this->getPermission()
         ]);
     }
     public function add()

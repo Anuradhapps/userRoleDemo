@@ -20,18 +20,27 @@
                                         <input type="text" name="name" class="form-control" required>
                                     </div>
                                 </div>
+                                @error('name')
+                                    <x-error_message>{{ $message }}</x-error_message>
+                                @enderror
                                 <div class="row mb-3">
                                     <label for="inputText" class="col-sm-12 col-form-label">email</label>
                                     <div class="col-sm-12">
                                         <input type="email" name="email" class="form-control" required>
                                     </div>
                                 </div>
+                                @error('email')
+                                    <x-error_message>{{ $message }}</x-error_message>
+                                @enderror
                                 <div class="row mb-3">
                                     <label for="inputText" class="col-sm-12 col-form-label">Password</label>
                                     <div class="col-sm-12">
                                         <input type="password" name="password" class="form-control" required>
                                     </div>
                                 </div>
+                                @error('password')
+                                    <x-error_message>{{ $message }}</x-error_message>
+                                @enderror
                                 <div class="row mb-3">
                                     <label for="inputText" class="col-sm-12 col-form-label">Select Role</label>
                                     <div class="col-sm-12">

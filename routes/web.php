@@ -23,7 +23,7 @@ Route::group(['middleware' => 'useradmin'], function () {
     Route::get('/panel/user', [UserController::class, 'list']);
     Route::get('/panel/user/add', [UserController::class, 'add']);
     Route::post('/panel/user/insert', [UserController::class, 'insert']);
-    Route::post('/panel/user/edit/{id}', [UserController::class, 'edit']);
+    Route::get('/panel/user/edit/{id}', [UserController::class, 'edit']);
     Route::post('/panel/user/update/{id}', [UserController::class, 'update']);
     Route::Delete('/panel/user/delete/{id}', [UserController::class, 'delete']);
 });
